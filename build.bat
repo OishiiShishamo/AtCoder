@@ -7,11 +7,11 @@ if "%SOURCE_FILE%"=="" set "SOURCE_FILE=main"
 
 :: "atcoder" の出現回数をカウント
 set "ATCODER_COUNT=0"
-for /f %%A in ('findstr /c:"atcoder" "%SOURCE_FILE%" ^| find /c /v ""') do set "ATCODER_COUNT=%%A"
+for /f %%A in ('findstr /c:"atcoder" "%SOURCE_FILE%.cpp" ^| find /c /v ""') do set "ATCODER_COUNT=%%A"
 
 :: "gmpxx.h" の出現回数をカウント
 set "GMP_COUNT=0"
-for /f %%A in ('findstr /c:"gmpxx.h" "%SOURCE_FILE%" ^| find /c /v ""') do set "GMP_COUNT=%%A"
+for /f %%A in ('findstr /c:"gmpxx.h" "%SOURCE_FILE%.cpp" ^| find /c /v ""') do set "GMP_COUNT=%%A"
 
 :: コンパイルオプションの決定
 set "CXX_FLAGS=-std=gnu++20 -O2 -Wall -Wextra"
