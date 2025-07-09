@@ -4,10 +4,10 @@
 SOURCE_FILE="${1:-main}.cpp" # 引数が無い場合はmain.cppを使用
 
 # "atcoder"の出現回数をカウント
-ATCODER_COUNT=$(grep -o "atcoder" "$SOURCE_FILE".cpp | wc -l)
+ATCODER_COUNT=$(grep -o "atcoder" "$SOURCE_FILE" | wc -l)
 
 # "gmpxx.h"をカウント (gmpxx.hのため)
-GMP_COUNT=$(grep -o "gmpxx.h" "$SOURCE_FILE".cpp | wc -l)
+GMP_COUNT=$(grep -o "gmpxx.h" "$SOURCE_FILE" | wc -l)
 
 # コンパイルオプションの決定
 CXX_FLAGS="-std=gnu++20 -O2 -Wall -Wextra"
@@ -25,4 +25,4 @@ if [ "$GMP_COUNT" -ge 1 ]; then
 fi
 
 # コンパイル実行
-g++ $CXX_FLAGS "$SOURCE_FILE" -o {1:-main} $LINK_FLAGS
+g++ $CXX_FLAGS "$SOURCE_FILE" -o ${1:-main}.bin $LINK_FLAGS
