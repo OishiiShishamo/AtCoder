@@ -1,8 +1,16 @@
 #include <bits/stdc++.h>
 
-#define ALL(a) (a).begin(), (a).end()
-#define RANGE_CIN(a) for (auto& x : a) std::cin >> x;
 using ll = long long;
+
+#define ALL(a) (a).begin(), (a).end()
+#define RALL(a) (a).rbegin(), (a).rend()
+#define RANGE_CIN(a) for (auto& x : a) std::cin >> x;
+#define CHMAX(x,y) x = std::max(x,y)
+#define CHMIN(x,y) x = std::min(x,y)
+#define UNIQUE_ERASE(v) v.erase(std::unique(ALL(v)), v.end());
+#define F_DIG_NUM(a) std::fixed << std::setprecision(a)
+#define REP(i, n) for (ll i = 0; i < (ll)(n); i++)
+#define FOR(i, a, b) for (ll i = (a); i < (b); i++)
 
 int main() {
     std::cin.tie(nullptr);
