@@ -3,6 +3,8 @@
 using ll = long long;
 using vll = std::vector<ll>;
 using vvll = std::vector<vll>;
+using vd = std::vector<double>;
+using vvd = std::vector<vd>;
 
 #define ALL(a) (a).begin(), (a).end()
 #define RALL(a) (a).rbegin(), (a).rend()
